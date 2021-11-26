@@ -10,7 +10,7 @@ pipeline{
         stage('Git Checkout'){
             steps{
 
-            git 'https://github.com/codewithz/dxc-web-app.git'
+            git 'https://github.com/RamanDxc/RamanDxc.git'
             }
         }
 
