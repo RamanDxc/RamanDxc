@@ -1,0 +1,24 @@
+pipeline{
+  agent any
+  
+  environment{
+    jarlocation='C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\dxc-maven-pipeline\\target\\my-app-1.0-SNAPSHOT.jar'
+  }
+    
+  tools{
+    maven "jenkins-maven"
+  }
+  
+  stages{
+    stage('Build'){
+      steps{
+        git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
+        
+        bat 'mvn clean test package'
+      }
+    }
+  }
+  post{
+    success{
+      bat 'java -jar %jarlocation%'
+}
