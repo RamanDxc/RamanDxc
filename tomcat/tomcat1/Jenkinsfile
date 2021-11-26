@@ -5,8 +5,8 @@ pipeline{
         maven "jenkins-maven"
     }
     environment{
-        tomcatWebLocation="\"C:\\Tomcat\\apache-tomcat-9.0.55\\webapps""
-        tomcatBinLocation="\"C:\\Tomcat\\apache-tomcat-9.0.55\\bin""
+        tomcatWebLocation="\"C:\\Tomcat\\apache-tomcat-9.0.55\\webapps\""
+        tomcatBinLocation="\"C:\\Tomcat\\apache-tomcat-9.0.55\\bin\""
         buildLocation="C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\dxc-web-app\\mywebapp\\target\\mywebapp.war"
     }
  
